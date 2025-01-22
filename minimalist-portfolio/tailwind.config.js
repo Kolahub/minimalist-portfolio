@@ -16,7 +16,8 @@ export default {
         cusGrayDarkBlue: '#33323D',
         cusVeryLightGrey: '#FAFAFA',
         cusLightGrey: '#EAEAEB',
-        cusRed: '#F43030'
+        cusRed: '#F43030',
+        cusMediumGrey: '#979797'
       },
       fontSize: {
         "h1" : ["50px", {
