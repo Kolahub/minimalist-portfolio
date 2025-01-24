@@ -1,19 +1,31 @@
 import { useState, useRef, useEffect } from 'react';
 
+/**
+ * ContactMe component renders a contact form with fields for name, email, and message.
+ * It includes validation for each field and displays error messages if validation fails.
+ * Errors are automatically cleared after 3 seconds. The form data is submitted to a specified
+ * endpoint if all fields are valid. The component uses React hooks for managing state, refs,
+ * and side effects.
+ */
+
 function ContactMe() {
+  // State to manage form errors
   const [errors, setErrors] = useState({ name: '', email: '', message: '' });
-  const timeoutRef = useRef()
+  
+  // Ref to store timeout ID for clearing errors
+  const timeoutRef = useRef();
 
-    // Start timeout
-    const startTimer = () => {
-        timeoutRef.current = setTimeout(() => {
-          setErrors({ name: '', email: '', message: '' })
-        }, 3000); // 3 seconds
-      };
+  // Function to start a timer that clears errors after 3 seconds
+  const startTimer = () => {
+    timeoutRef.current = setTimeout(() => {
+      setErrors({ name: '', email: '', message: '' });
+    }, 3000); // 3 seconds
+  };
 
+  // Ref to access the form DOM element
   const formRef = useRef();
 
-  // Cleanup on unmount
+  // Cleanup function to clear timeout when component unmounts
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
@@ -22,7 +34,7 @@ function ContactMe() {
     };
   }, []);
 
-  // Validation rules using object lookup
+  // Validation rules for form fields
   const validations = {
     name: (value) => {
       if (!value.trim()) return 'Name is required';
@@ -42,11 +54,13 @@ function ContactMe() {
     }
   };
 
+  // Function to validate a specific field
   const validateField = (name, value) => {
     const error = validations[name] ? validations[name](value) : '';
     setErrors(prev => ({ ...prev, [name]: error }));
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(formRef.current);
@@ -59,13 +73,14 @@ function ContactMe() {
       setErrors(prev => ({ ...prev, [name]: error }));
     });
 
+    // Submit form if no errors
     if (!hasErrors) {
       e.target.submit();
     }
 
-    startTimer()
+    // Start error clearing timer
+    startTimer();
   };
-
 
   return (
     <div className='container mx-auto px-4'>

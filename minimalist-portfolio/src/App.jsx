@@ -1,36 +1,43 @@
-// import React from 'react'
-import {RouterProvider, createBrowserRouter} from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import RootLayout from './pages/RootLayout';
 import HomePage from './pages/HomePage';
-import PortfolioPageContent from './pages/PortfolioPageContent';
-import PortfolioDetailPageContent from './pages/PortfolioDetailPageContent';
+import PortfolioPageContent, { Loader as pageContentLoader } from './pages/PortfolioPageContent';
+import PortfolioDetailPageContent, { Loader as PageDetailContentLoader } from './pages/PortfolioDetailPageContent';
 import ContactPageContent from './pages/ContactPageContent';
+import LoadingSpinner from './components/LoadingSpinner';
+import ErrorPage from './pages/ErrorPage';
 
-const router = createBrowserRouter ([
+// Define the router configuration for the application
+const router = createBrowserRouter([
   {
     path: '/',
-    element: <RootLayout />,
+    element: <RootLayout />, // Root layout component for the main structure
+    errorElement: <ErrorPage />, // Error page component for handling route errors
     children: [
-      {index: true, element: <HomePage />},
+      { index: true, element: <HomePage /> }, // Home page route
       {
         path: "portfolio",
-        element: <PortfolioPageContent />,
         children: [
-          {index: true, element: <PortfolioDetailPageContent />}
+          { index: true, element: <PortfolioPageContent />, loader: pageContentLoader }, // Portfolio page route with loader
+          { path: ":projectId", id: 'project-detail', element: <PortfolioDetailPageContent />, loader: PageDetailContentLoader } // Portfolio detail page route with loader
         ]
       },
       {
         path: 'contactme',
-        element: <ContactPageContent />
+        element: <ContactPageContent /> // Contact page route
       }
     ]
   }
-])
+]);
 
+// App component serves as the entry point for the application
 function App() {
   return (
-   <RouterProvider router={router}/>
-  )
+    // RouterProvider sets up the routing context for the application
+    // 'router' is the configuration object defining the routes
+    // 'fallbackElement' displays a loading spinner while routes are being loaded
+    <RouterProvider router={router} fallbackElement={<LoadingSpinner />} />
+  );
 }
 
-export default App
+export default App;
