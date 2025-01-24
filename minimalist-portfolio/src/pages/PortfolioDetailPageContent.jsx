@@ -86,26 +86,25 @@ export async function Loader({ params }) {
   try {
     const response = await fetch('/data.json');
     if (!response.ok) throw new Error('Failed to fetch data');
-    
+
     const allProjects = await response.json();
-    const currentProject = allProjects.find(p => p.id.toString() === params.projectId);
+    const currentProject = allProjects.find((p) => p.id.toString() === params.projectId);
 
     if (!currentProject) {
-      throw new Response('Project Not Found', { 
+      throw new Response('Project Not Found', {
         status: 404,
-        statusText: 'Project Not Found'
+        statusText: 'Project Not Found',
       });
     }
 
-    return { 
+    return {
       currentProject,
-      allProjects 
+      allProjects,
     };
-    
   } catch (error) {
     throw new Response(error.message || 'Server Error', {
       status: error.status || 500,
-      statusText: error.statusText || 'Internal Server Error'
+      statusText: error.statusText || 'Internal Server Error',
     });
   }
 }

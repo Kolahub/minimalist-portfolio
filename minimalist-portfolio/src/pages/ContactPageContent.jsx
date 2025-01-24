@@ -21,9 +21,9 @@ function ContactPageContent() {
             </p>
             {/* Social media icons with hover effect for scaling */}
             <div className="flex gap-4 mt-8">
-              <a href="" className="hover:scale-125"><img src={github} alt="GitHub Profile" /></a>
-              <a href="" className="hover:scale-125"><img src={twitter} alt="Twitter Profile" /></a>
-              <a href="" className="hover:scale-125"><img src={linkedin} alt="LinkedIn Profile" /></a>
+              <a href="#" className="hover:scale-125"><img src={github} alt="GitHub Profile" /></a>
+              <a href="#" className="hover:scale-125"><img src={twitter} alt="Twitter Profile" /></a>
+              <a href="#" className="hover:scale-125"><img src={linkedin} alt="LinkedIn Profile" /></a>
             </div>
           </div>
         </div>
