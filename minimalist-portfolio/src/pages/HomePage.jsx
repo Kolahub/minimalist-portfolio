@@ -56,7 +56,7 @@ function HomePage() {
         <picture>
           <source media='(min-width: 1024px)' srcSet={homePageProfile} />
           <source media='(min-width: 768px)' srcSet={homePageProfileT} />
-          <img src={homePageProfileM} alt={'hero pic'} className='h-[346px] sm:h-full' />
+          <img src={homePageProfileM} alt={'hero pic'} className='sm:h-full' />
         </picture>
 
         {/* Text container with border and centered content */}
