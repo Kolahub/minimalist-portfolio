@@ -29,7 +29,7 @@ function Footer() {
               </div>
 
               {/* Divider line */}
-              <div className='w-full sm:flex-1 h-px bg-gray-300'></div>
+              <div className='sm:w-full sm:flex-1 h-px bg-gray-300'></div>
 
               {/* Contact button */}
               <div className='sm:w-auto w-full text-center'>
