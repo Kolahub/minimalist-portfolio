@@ -4,9 +4,9 @@
         "title": "Manage",
         "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
         "image": {
-            "desktop": "/images/portfolio/desktop/image-portfolio-manage@2x.jpg",
-            "tablet": "/images/portfolio/tablet/image-portfolio-manage@2x.jpg",
-            "mobile": "/images/portfolio/mobile/image-portfolio-manage@2x.jpg"
+            "desktop": "portfolio/desktop/image-portfolio-manage@2x.jpg",
+            "tablet": "portfolio/tablet/image-portfolio-manage@2x.jpg",
+            "mobile": "portfolio/mobile/image-portfolio-manage@2x.jpg"
         },
         "details": {
             "projectBackground": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
@@ -36,9 +36,9 @@
         "title": "Bookmark",
         "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
         "image": {
-            "desktop": "/images/portfolio/desktop/image-portfolio-bookmark@2x.jpg",
-            "tablet": "/images/portfolio/tablet/image-portfolio-bookmark@2x.jpg",
-            "mobile": "/images/portfolio/mobile/image-portfolio-bookmark@2x.jpg"
+            "desktop": "portfolio/desktop/image-portfolio-bookmark@2x.jpg",
+            "tablet": "portfolio/tablet/image-portfolio-bookmark@2x.jpg",
+            "mobile": "portfolio/mobile/image-portfolio-bookmark@2x.jpg"
         },
         "details": {
             "projectBackground": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
@@ -69,9 +69,9 @@
         "title": "Insure",
         "description": "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
         "image": {
-            "desktop": "/images/portfolio/desktop/image-portfolio-insure@2x.jpg",
-            "tablet": "/images/portfolio/tablet/image-portfolio-insure@2x.jpg",
-            "mobile": "/images/portfolio/mobile/image-portfolio-insure@2x.jpg"
+            "desktop": "portfolio/desktop/image-portfolio-insure@2x.jpg",
+            "tablet": "portfolio/tablet/image-portfolio-insure@2x.jpg",
+            "mobile": "portfolio/mobile/image-portfolio-insure@2x.jpg"
         },
         "details": {
             "projectBackground": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
@@ -102,9 +102,9 @@
         "title": "Fylo",
         "description": "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
         "image": {
-            "desktop": "/images/portfolio/desktop/image-portfolio-fylo@2x.jpg",
-            "tablet": "/images/portfolio/tablet/image-portfolio-fylo@2x.jpg",
-            "mobile": "/images/portfolio/mobile/image-portfolio-fylo@2x.jpg"
+            "desktop": "portfolio/desktop/image-portfolio-fylo@2x.jpg",
+            "tablet": "portfolio/tablet/image-portfolio-fylo@2x.jpg",
+            "mobile": "portfolio/mobile/image-portfolio-fylo@2x.jpg"
         },
         "details": {
             "projectBackground": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
