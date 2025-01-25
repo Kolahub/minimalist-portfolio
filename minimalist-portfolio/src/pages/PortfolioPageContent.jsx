@@ -17,9 +17,9 @@ function PortfolioPageContent() {
             <div className='sm:my-auto lg:my-0'>
               <picture>
                 {/* Responsive image sources for different screen sizes */}
-                <source media='(min-width: 1024px)' srcSet={`/images/${project.image.desktop}`} />
-                <source media='(min-width: 768px)' srcSet={`/images/${project.image.tablet}`} />
-                <img src={`/images/${project.image.tablet}`} alt={project.title} className='sm:h-[314px] lg:h-full' />
+                <source media='(min-width: 1024px)' srcSet={project.image.desktop} />
+                <source media='(min-width: 768px)' srcSet={project.image.tablet} />
+                <img src={project.image.tablet} alt={project.title} className='sm:h-[314px] lg:h-full' />
               </picture>
             </div>
 
