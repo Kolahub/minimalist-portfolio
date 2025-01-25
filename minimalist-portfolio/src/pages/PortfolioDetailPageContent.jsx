@@ -84,7 +84,7 @@ export default PortfolioDetailPageContent;
 // Loader function to fetch project data based on route parameters
 export async function Loader({ params }) {
   try {
-    const response = await fetch(`${import.meta.env.BASE_URL}data.json`);
+    const response = await fetch(`${import.meta.env.BASE_URL}data.json`)
     if (!response.ok) throw new Error('Failed to fetch data');
 
     const allProjects = await response.json();
