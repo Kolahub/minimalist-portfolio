@@ -1,6 +1,6 @@
-import github from '../assets/images/icons/githubW.svg'
-import linkedin from '../assets/images/icons/linkedinW.svg'
-import twitter from '../assets/images/icons/twitterW.svg'
+import github from '/images/icons/githubW.svg'
+import linkedin from '/images/icons/linkedinW.svg'
+import twitter from '/images/icons/twitterW.svg'
 import ContactMe from '../components/ContactMe'
 
 function ContactPageContent() {
@@ -21,9 +21,9 @@ function ContactPageContent() {
             </p>
             {/* Social media icons with hover effect for scaling */}
             <div className="flex gap-4 mt-8">
-              <a href="#" className="hover:scale-125"><img src={github} alt="GitHub Profile" /></a>
-              <a href="#" className="hover:scale-125"><img src={twitter} alt="Twitter Profile" /></a>
-              <a href="#" className="hover:scale-125"><img src={linkedin} alt="LinkedIn Profile" /></a>
+              <a href="#" className="hover:scale-125 transition-all"><img src={github} alt="GitHub Profile" /></a>
+              <a href="#" className="hover:scale-125 transition-all"><img src={twitter} alt="Twitter Profile" /></a>
+              <a href="#" className="hover:scale-125 transition-all"><img src={linkedin} alt="LinkedIn Profile" /></a>
             </div>
           </div>
         </div>

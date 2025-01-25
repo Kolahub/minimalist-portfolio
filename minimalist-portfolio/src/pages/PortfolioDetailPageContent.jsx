@@ -19,9 +19,9 @@ function PortfolioDetailPageContent() {
       {/* Hero image section with responsive sources */}
       <div className=''>
         <picture>
-          <source media='(min-width: 1024px)' srcSet={new URL(currentProject.details.image.hero.desktop, import.meta.url).href} />
-          <source media='(min-width: 768px)' srcSet={new URL(currentProject.details.image.hero.tablet, import.meta.url).href} />
-          <img src={new URL(currentProject.details.image.hero.tablet, import.meta.url).href} alt={currentProject.title} className='' />
+          <source media='(min-width: 1024px)' srcSet={currentProject.details.image.hero.desktop} />
+          <source media='(min-width: 768px)' srcSet={currentProject.details.image.hero.tablet} />
+          <img src={currentProject.details.image.hero.tablet} alt={currentProject.title} className='' />
         </picture>
       </div>
 
@@ -58,15 +58,15 @@ function PortfolioDetailPageContent() {
             <h1 className='font-mainFont text-h2 capitalize mb-8'>static previews</h1>
             <div className='flex flex-col gap-6'>
               <picture>
-                <source media='(min-width: 1024px)' srcSet={new URL(currentProject.details.image.previewOne.desktop, import.meta.url).href} />
-                <source media='(min-width: 768px)' srcSet={new URL(currentProject.details.image.previewOne.tablet, import.meta.url).href} />
-                <img src={new URL(currentProject.details.image.previewOne.tablet, import.meta.url).href} className='w-full' />
+                <source media='(min-width: 1024px)' srcSet={currentProject.details.image.previewOne.desktop} />
+                <source media='(min-width: 768px)' srcSet={currentProject.details.image.previewOne.tablet} />
+                <img src={currentProject.details.image.previewOne.tablet} className='w-full' />
               </picture>
 
               <picture>
-                <source media='(min-width: 1024px)' srcSet={new URL(currentProject.details.image.previewTwo.desktop, import.meta.url).href} />
-                <source media='(min-width: 768px)' srcSet={new URL(currentProject.details.image.previewTwo.tablet, import.meta.url).href} />
-                <img src={new URL(currentProject.details.image.previewTwo.tablet, import.meta.url).href} className='w-full' />
+                <source media='(min-width: 1024px)' srcSet={currentProject.details.image.previewTwo.desktop} />
+                <source media='(min-width: 768px)' srcSet={currentProject.details.image.previewTwo.tablet} />
+                <img src={currentProject.details.image.previewTwo.tablet} className='w-full' />
               </picture>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default PortfolioDetailPageContent;
 // Loader function to fetch project data based on route parameters
 export async function Loader({ params }) {
   try {
-    const response = await fetch('/data.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}data.json`);
     if (!response.ok) throw new Error('Failed to fetch data');
 
     const allProjects = await response.json();

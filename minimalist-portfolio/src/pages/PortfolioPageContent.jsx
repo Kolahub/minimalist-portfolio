@@ -17,9 +17,9 @@ function PortfolioPageContent() {
             <div className='sm:my-auto lg:my-0'>
               <picture>
                 {/* Responsive image sources for different screen sizes */}
-                <source media='(min-width: 1024px)' srcSet={new URL(project.image.desktop, import.meta.url).href} />
-                <source media='(min-width: 768px)' srcSet={new URL(project.image.tablet, import.meta.url).href} />
-                <img src={new URL(project.image.tablet, import.meta.url).href} alt={project.title} className='sm:h-[314px] lg:h-full' />
+                <source media='(min-width: 1024px)' srcSet={project.image.desktop} />
+                <source media='(min-width: 768px)' srcSet={project.image.tablet} />
+                <img src={project.image.tablet} alt={project.title} className='sm:h-[314px] lg:h-full' />
               </picture>
             </div>
 
@@ -45,7 +45,7 @@ export default PortfolioPageContent;
 // Loader function to fetch data from a JSON file
 export async function Loader() {
   try {
-    const response = await fetch('/data.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}data.json`);
     // Check if the response is successful
     if (!response.ok) throw new Error('Failed to fetch data');
     return response; // Return parsed data

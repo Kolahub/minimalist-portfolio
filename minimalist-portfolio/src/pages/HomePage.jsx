@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import homePageHero from '../assets/images/homepage/desktop/image-homepage-hero@2x.jpg';
-import homePageHeroT from '../assets/images/homepage/tablet/image-homepage-hero@2x.jpg';
-import homePageHeroM from '../assets/images/homepage/mobile/image-homepage-hero@2x.jpg';
-import homePageProfile from '../assets/images/homepage/desktop/image-homepage-profile@2x.jpg';
-import homePageProfileT from '../assets/images/homepage/tablet/image-homepage-profile@2x.jpg';
-import homePageProfileM from '../assets/images/homepage/mobile/image-homepage-profile@2x.jpg';
-import downArrows from '../assets/images/icons/down-arrows.svg';
-import downArrowsW from '../assets/images/icons/down-arrowsW.svg';
+import homePageHero from '/images/homepage/desktop/image-homepage-hero@2x.jpg';
+import homePageHeroT from '/images/homepage/tablet/image-homepage-hero@2x.jpg';
+import homePageHeroM from '/images/homepage/mobile/image-homepage-hero@2x.jpg';
+import homePageProfile from '/images/homepage/desktop/image-homepage-profile@2x.jpg';
+import homePageProfileT from '/images/homepage/tablet/image-homepage-profile@2x.jpg';
+import homePageProfileM from '/images/homepage/mobile/image-homepage-profile@2x.jpg';
+import downArrows from '/images/icons/down-arrows.svg';
+import downArrowsW from '/images/icons/down-arrowsW.svg';
 import BasicBtn from '../components/BasicBtn';
 
 /**
