@@ -51,12 +51,12 @@ function HomePage() {
       </div>
 
       {/* About Me section with profile image and description */}
-      <div className='flex flex-col sm:flex-row gap-8 sm:gap-16 lg:gap-32 container mx-auto mt-32 h-[346px] sm:h-[600px] px-5 md:px-0'>
+      <div className='flex flex-col sm:flex-row gap-8 sm:gap-16 lg:gap-32 container mx-auto mt-32 sm:h-[600px] px-5 md:px-0'>
         {/* Profile image with responsive sources for different screen sizes */}
         <picture>
           <source media='(min-width: 1024px)' srcSet={homePageProfile} />
           <source media='(min-width: 768px)' srcSet={homePageProfileT} />
-          <img src={homePageProfileM} alt={'hero pic'} className='h-full' />
+          <img src={homePageProfileM} alt={'hero pic'} className='h-[346px] sm:h-full' />
         </picture>
 
         {/* Text container with border and centered content */}
